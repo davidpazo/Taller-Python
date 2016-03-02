@@ -1,5 +1,6 @@
 from gi.repository import Gtk
 from Taller import Taller
+
 class Login:
     def __init__(self):
 
@@ -11,13 +12,11 @@ class Login:
             self.ventanaEntrada = builder2.get_object("inicio")
 
             sinais = {"on_Entrada_clicked": self.on_Entrada_clicked,
-                  "delete-event": self.cerrar}
+                      "delete-event": self.cerrar}
 
             builder2.connect_signals(sinais)
             self.ventanaEntrada.set_title("Log in.")
             self.ventanaEntrada.show_all()
-
-
 
     # Método de entrada para poder acceder por usuario y contraseña a la segunda ventana
     def on_Entrada_clicked(self, widget):
@@ -29,10 +28,10 @@ class Login:
 
         else:
             self.popup("Prueba otra vez")
-
+    #este metodo destruye las ventanas
     def cerrar(self, widget):
         widget.destroy()
-
+    #Metodo para que salga una ventana emergente segun el metodo en el que lo llame
     def popup(self, texto):
         window = Gtk.Window(title="Warning")
         label = Gtk.Label(texto)

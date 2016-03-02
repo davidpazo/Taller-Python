@@ -14,6 +14,7 @@
           <object class="GtkGrid" id="grid1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="margin_bottom">1</property>
             <child>
               <object class="GtkLabel" id="lmatricula">
                 <property name="visible">True</property>
@@ -89,87 +90,14 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="lcliente">
+              <object class="GtkEntry" id="matricula">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Cliente</property>
+                <property name="can_focus">True</property>
+                <property name="max_width_chars">0</property>
               </object>
               <packing>
-                <property name="left_attach">2</property>
+                <property name="left_attach">1</property>
                 <property name="top_attach">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel" id="lcifnif">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">CIF o NIF</property>
-              </object>
-              <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">1</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel" id="ltelefono">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Telefono</property>
-              </object>
-              <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">2</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel" id="ldireccion">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Dirección</property>
-              </object>
-              <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">3</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkEntry" id="cliente">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkEntry" id="cifnif">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">1</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkEntry" id="telefono">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">2</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkEntry" id="direccion">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">3</property>
               </packing>
             </child>
             <child>
@@ -178,8 +106,13 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="margin_left">6</property>
+                <property name="margin_right">6</property>
+                <property name="margin_top">6</property>
+                <property name="margin_bottom">6</property>
                 <property name="use_stock">True</property>
                 <property name="yalign">0.4699999988079071</property>
+                <property name="always_show_image">True</property>
                 <signal name="clicked" handler="on_consultar_clicked" swapped="no"/>
               </object>
               <packing>
@@ -193,7 +126,12 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="margin_left">6</property>
+                <property name="margin_right">6</property>
+                <property name="margin_top">6</property>
+                <property name="margin_bottom">6</property>
                 <property name="use_stock">True</property>
+                <property name="always_show_image">True</property>
                 <signal name="clicked" handler="on_insertar_clicked" swapped="no"/>
               </object>
               <packing>
@@ -207,7 +145,12 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="margin_left">6</property>
+                <property name="margin_right">6</property>
+                <property name="margin_top">6</property>
+                <property name="margin_bottom">6</property>
                 <property name="use_stock">True</property>
+                <property name="always_show_image">True</property>
                 <signal name="clicked" handler="on_Modificar_clicked" swapped="no"/>
               </object>
               <packing>
@@ -217,11 +160,16 @@
             </child>
             <child>
               <object class="GtkButton" id="borrar">
-                <property name="label">gtk-remove</property>
+                <property name="label">gtk-delete</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="margin_left">6</property>
+                <property name="margin_right">6</property>
+                <property name="margin_top">6</property>
+                <property name="margin_bottom">6</property>
                 <property name="use_stock">True</property>
+                <property name="always_show_image">True</property>
                 <signal name="clicked" handler="on_borrar_clicked" swapped="no"/>
               </object>
               <packing>
@@ -230,15 +178,119 @@
               </packing>
             </child>
             <child>
-              <object class="GtkEntry" id="matricula">
+              <object class="GtkEntry" id="direccion">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="max_width_chars">0</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
+                <property name="left_attach">4</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="telefono">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">4</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="cifnif">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">4</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="cliente">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">4</property>
                 <property name="top_attach">0</property>
               </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="ayuda">
+                <property name="label">gtk-help</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="margin_left">6</property>
+                <property name="margin_right">6</property>
+                <property name="margin_top">6</property>
+                <property name="margin_bottom">6</property>
+                <property name="use_stock">True</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="on_ayuda_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">4</property>
+                <property name="top_attach">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="ldireccion">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Dirección</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="ltelefono">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Telefono</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="lcifnif">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">CIF o NIF</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="lcliente">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Cliente</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
             </child>
           </object>
           <packing>
